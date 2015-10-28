@@ -59,3 +59,8 @@ map <up> <nop>
 map <down> <nop>
 map <left> <nop>
 map <right> <nop>
+
+if has("persistent_undo")
+    set undodir='~/.undodir/'
+    set undofile
+endif
