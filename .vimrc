@@ -1,12 +1,6 @@
-let os = substitute(system('uname'), "\n", "", "")
-if (os == "MINGW64_NT-10.0")
-    if filereadable("C:/Users/ah/.vimrc")
-        set runtimepath+=C:/Users/ah/vimfiles/
-    endif
-    if filereadable("C:/Users/Alex/.vimrc")
-        set runtimepath+=C:/Users/Alex/vimfiles/
-    endif
-endif
+" Put plugins and dictionaries in this dir (also on Windows)
+let vimDir = '$HOME/.vim'
+let &runtimepath.=','.vimDir
 
 execute pathogen#infect()
 syntax on
