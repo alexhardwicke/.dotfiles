@@ -1,0 +1,3 @@
+--type-add=fsharp:ext:fs
+--type-add=fsharp:ext:fsx
+--smart-case
