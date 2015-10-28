@@ -2,11 +2,9 @@ let os = substitute(system('uname'), "\n", "", "")
 if (os == "MINGW64_NT-10.0")
     if filereadable("C:/Users/ah/.vimrc")
         set runtimepath+=C:/Users/ah/vimfiles/
-        source C:/Users/ah/.vimrc
     endif
     if filereadable("C:/Users/Alex/.vimrc")
         set runtimepath+=C:/Users/Alex/vimfiles/
-        source C:/Users/Alex/.vimrc
     endif
 endif
 
