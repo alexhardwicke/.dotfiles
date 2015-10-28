@@ -54,7 +54,12 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
-if has("persistent_undo")
-    set undodir='~/.undodir/'
+" Keep undo history across sessions by storing it in a file
+if has('persistent_undo')
+    let myUndoDir = expand(vimDir . '/undodir')
+    " Create dirs
+    call system('mkdir ' . vimDir)
+    call system('mkdir ' . myUndoDir)
+    let &undodir = myUndoDir
     set undofile
 endif
