@@ -23,5 +23,3 @@
 	remote = 3
 [rebase]
 	autosquash = true
-[core]
-	editor = 'C:\\Program Files (x86)\\vim\\vim74\\vim.exe'
