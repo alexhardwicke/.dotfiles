@@ -3,4 +3,3 @@ GIT_PROMPT_ONLY_IN_REPO=1
 source ~/bash-git-prompt/gitprompt.sh
 GIT_PROMPT_THEME=Custom
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
-eval $(ssh-agent -s)
