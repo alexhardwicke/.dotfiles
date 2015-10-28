@@ -1,3 +1,6 @@
 --type-add=fsharp:ext:fs
 --type-add=fsharp:ext:fsx
 --smart-case
+--color-filename=green
+--color-match="black on_bright_red"
+--color-lineno=yellow
