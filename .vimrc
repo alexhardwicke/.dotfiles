@@ -53,6 +53,7 @@ map <up> <nop>
 map <down> <nop>
 map <left> <nop>
 map <right> <nop>
+nnoremap <F5> :UndotreeToggle<cr>
 
 " Keep undo history across sessions by storing it in a file
 if has('persistent_undo')
