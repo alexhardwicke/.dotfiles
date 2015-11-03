@@ -8,6 +8,7 @@
 	st = status
 	branch-name = rev-parse --abbrev-ref HEAD
 	publish = push -u origin master
+    stash-peek = stash show -p stash@{0}
 [color "diff"]
 	meta = 6
 	frag = 3
