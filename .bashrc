@@ -7,7 +7,7 @@ bind 'Tab: menu-complete'
 bind '"\e[Z": complete'
 
 cat() {
-    pygmentize $1 | perl -e 'print ++$i." $_" for <>'
+    pygmentize -g $1 | perl -e 'print ++$i." $_" for <>'
 }
 
 # Add python scripts to path
