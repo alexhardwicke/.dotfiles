@@ -5,3 +5,7 @@ GIT_PROMPT_THEME=Custom
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
 bind 'Tab: menu-complete'
 bind '"\e[Z": complete'
+
+cat() {
+    pygmentize $1 | perl -e 'print ++$i." $_" for <>'
+}
