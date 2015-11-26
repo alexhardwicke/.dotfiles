@@ -7,6 +7,10 @@ bind 'Tab: menu-complete'
 bind '"\e[Z": complete'
 
 cat() {
+    pygmentize -g $1
+}
+
+catl() {
     pygmentize -g $1 | perl -e 'print ++$i." $_" for <>'
 }
 
