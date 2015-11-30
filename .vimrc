@@ -9,7 +9,6 @@ set background=dark
 colorscheme solarized
 set ruler
 set number
-set grepprg=ack\ -k
 set ignorecase
 set hlsearch
 set incsearch
