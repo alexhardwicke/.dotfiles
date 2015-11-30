@@ -33,11 +33,6 @@ set statusline+=%*
 set laststatus=2
 set updatetime=750
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_cs_checkers  = ['code_checker', 'issues', 'semantic']
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let g:airline#extensions#tabline#enabled = 1
