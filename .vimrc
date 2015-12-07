@@ -39,6 +39,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='hardwicke'
 
+let g:airline#extensions#whitespace#enabled = 0
+
 let g:ctrlp_open_multiple_files = 't'
 
 autocmd VimLeave * silent !echo -ne "\033]112\007"
