@@ -37,7 +37,7 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='solarized'
+let g:airline_theme='hardwicke'
 
 let g:ctrlp_open_multiple_files = 't'
 
