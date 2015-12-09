@@ -4,8 +4,8 @@ FontHeight=14
 Locale=en_GB
 Charset=UTF-8
 Term=xterm-256color
-Columns=100
-Rows=26
+Columns=120
+Rows=35
 ZoomShortcuts=no
 
 ForegroundColour=131, 148, 150
