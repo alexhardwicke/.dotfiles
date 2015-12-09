@@ -44,6 +44,12 @@ let g:airline#extensions#whitespace#enabled = 0
 
 let g:ctrlp_open_multiple_files = 't'
 
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_always_populate_loc_list = 1
+
 autocmd VimLeave * silent !echo -ne "\033]112\007"
 let &t_EI .= "\e[1 q"
 let &t_SI .= "\e[5 q"
