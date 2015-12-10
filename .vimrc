@@ -50,11 +50,11 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_always_populate_loc_list = 1
 
-autocmd VimLeave * silent !echo -ne "\033]112\007"
-let &t_EI .= "\e[1 q"
-let &t_SI .= "\e[5 q"
-let &t_ti .= "\e[1 q"
-let &t_te .= "\e[0 q"
+" autocmd VimLeave * silent !echo -ne "\033]112\007"
+" let &t_EI .= "\e[1 q"
+" let &t_SI .= "\e[5 q"
+" let &t_ti .= "\e[1 q"
+" let &t_te .= "\e[0 q"
 
 " Use the damn hjkl keys
 map <up> <nop>
