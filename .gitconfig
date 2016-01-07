@@ -23,4 +23,6 @@
 	local = 6
 	remote = 3
 [rebase]
-	autosquash = true
+    autosquash = true
+[stash]
+	showPatch = true
