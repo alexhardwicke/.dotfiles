@@ -1,3 +1,7 @@
+if [ "$TERM" == "xterm" ]; then
+    export TERM=xterm-256color
+fi
+
 PS1="\[\033[34m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\] $ "
 GIT_PROMPT_ONLY_IN_REPO=1
 source ~/bash-git-prompt/gitprompt.sh
