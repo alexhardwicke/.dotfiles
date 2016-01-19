@@ -20,13 +20,15 @@ catl() {
     pygmentize -g $1 | perl -e 'print ++$i." $_" for <>'
 }
 
-# Add python scripts to path
-pythonPaths=( $(where python) )
-pythonPath=${pythonPaths[0]}
-pythonPath=${pythonPath//'\'/'/'}
-pythonPath=${pythonPath//'C:'/'/c'}
-pythonPath=${pythonPath%/*}
-pythonPath="$pythonPath/Scripts"
-export PATH=$PATH:$pythonPath
+if [ "$(uname -o)" == "Msys" ]; then
+    # Add python scripts to path
+    pythonPaths=( $(where python) )
+    pythonPath=${pythonPaths[0]}
+    pythonPath=${pythonPath//'\'/'/'}
+    pythonPath=${pythonPath//'C:'/'/c'}
+    pythonPath=${pythonPath%/*}
+    pythonPath="$pythonPath/Scripts"
+    export PATH=$PATH:$pythonPath
+fi
 
 echo -e "\e]12;red\a"
