@@ -25,3 +25,5 @@ pythonPath=${pythonPath//'C:'/'/c'}
 pythonPath=${pythonPath%/*}
 pythonPath="$pythonPath/Scripts"
 export PATH=$PATH:$pythonPath
+
+echo -e "\e]12;red\a"
