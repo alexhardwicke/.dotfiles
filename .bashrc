@@ -30,5 +30,3 @@ if [ "$(uname -o)" == "Msys" ]; then
     pythonPath="$pythonPath/Scripts"
     export PATH=$PATH:$pythonPath
 fi
-
-echo -e "\e]12;red\a"
