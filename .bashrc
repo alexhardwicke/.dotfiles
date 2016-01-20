@@ -2,7 +2,7 @@ if [ "$TERM" == "xterm" ]; then
     export TERM=xterm-256color
 fi
 
-source ~/bash-git-prompt/.git-prompt.sh
+source ~/bashconf/bin/.git-prompt.sh
 source ~/bash-git-prompt/gitprompt.sh
 
 PS1="\[\033[34m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\] $ "
