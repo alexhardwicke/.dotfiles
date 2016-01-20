@@ -26,3 +26,5 @@
     autosquash = true
 [stash]
 	showPatch = true
+[core]
+	editor = vim
