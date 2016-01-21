@@ -4,7 +4,6 @@ if [ "$TERM" == "xterm" ]; then
 fi
 
 if [ "$(uname -o)" == "Msys" ]; then
-    export PATH=~/.vim/ctags58/:$PATH
 else
     if [ "$(uname)" == "Linux" ]; then
         source ~/.dotfiles/mintty-solarized-dark.sh
