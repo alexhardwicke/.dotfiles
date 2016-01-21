@@ -1,10 +1,14 @@
 if [ "$TERM" == "xterm" ]; then
     export TERM=xterm-256color
-    source ~/.dotfiles/mintty-solarized-dark.sh
+
 fi
 
 if [ "$(uname -o)" == "Msys" ]; then
     export PATH=~/.vim/ctags58/:$PATH
+else
+    if [ "$(uname)" == "Linux" ]; then
+        source ~/.dotfiles/mintty-solarized-dark.sh
+    fi
 fi
 
 source ~/bashconf/bin/.git-prompt.sh
@@ -34,3 +38,4 @@ if [ "$(uname -o)" == "Msys" ]; then
     pythonPath="$pythonPath/Scripts"
     export PATH=$PATH:$pythonPath
 fi
+
