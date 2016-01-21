@@ -1,13 +1,9 @@
 if [ "$TERM" == "xterm" ]; then
     export TERM=xterm-256color
-
 fi
 
-if [ "$(uname -o)" == "Msys" ]; then
-else
-    if [ "$(uname)" == "Linux" ]; then
-        source ~/.dotfiles/mintty-solarized-dark.sh
-    fi
+if [ "$(uname)" == "Linux" ]; then
+    source ~/.dotfiles/mintty-solarized-dark.sh
 fi
 
 source ~/bashconf/bin/.git-prompt.sh
