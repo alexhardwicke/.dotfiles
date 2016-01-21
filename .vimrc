@@ -74,6 +74,7 @@ if has('gui_running')
 endif
 
 nnoremap <F5> :UndotreeToggle<cr>
+nmap <F8> :TagbarToggle<CR>
 
 " Keep undo history across sessions by storing it in a file
 if has('persistent_undo')
