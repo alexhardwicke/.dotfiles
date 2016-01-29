@@ -2,7 +2,7 @@
 	name = Alex Hardwicke
 	email = alex.hardwicke@outlook.com
 [push]
-	default = matching
+	default = simple
 	followTags = true
 [alias]
 	st = status
