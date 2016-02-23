@@ -31,7 +31,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 set laststatus=2
 set updatetime=750
-set timeoutlen=50
+set ttimeoutlen=50
 if has("gui_running") == 0
     set shell=/bin/bash
 endif
