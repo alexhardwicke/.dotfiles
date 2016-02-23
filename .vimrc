@@ -58,12 +58,6 @@ let g:syntastic_always_populate_loc_list = 1
 " let &t_ti .= "\e[1 q"
 " let &t_te .= "\e[0 q"
 
-" Use the damn hjkl keys
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-
 " An ugly hack to get this to load for vim but NOT for vsvim
 " (because operator-flashy doesn't work with vsvim)
 if version > 700
