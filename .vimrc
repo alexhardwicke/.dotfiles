@@ -32,6 +32,8 @@ set statusline+=%*
 set laststatus=2
 set updatetime=750
 set ttimeoutlen=50
+let mapleader=" "
+
 if has("gui_running") == 0
     set shell=/bin/bash
 endif
