@@ -46,7 +46,6 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='hardwicke'
 let g:airline#extensions#whitespace#enabled = 0
 
-let g:ctrlp_open_multiple_files = 't'
 
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_auto_loc_list = 1
