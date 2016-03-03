@@ -55,6 +55,8 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_always_populate_loc_list = 1
 
+set commentstring=//%s
+
 " An ugly hack to get this to load for vim but NOT for vsvim
 " (because operator-flashy doesn't work with vsvim)
 if version > 700
