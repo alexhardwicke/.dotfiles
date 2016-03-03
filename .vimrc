@@ -62,10 +62,6 @@ if version > 700
     nmap Y <Plug>(operator-flashy)$
 endif
 
-if has('gui_running')
-    call gitgutter#disable()
-endif
-
 nnoremap <F5> :UndotreeToggle<cr>
 
 " Keep undo history across sessions by storing it in a file
