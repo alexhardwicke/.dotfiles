@@ -130,3 +130,6 @@ nnoremap <Leader>pp <Esc>:call CreateProperty()<CR>
 nnoremap <Leader>pb <Esc>:call CreateBackingFieldProperty()<CR>
 nnoremap <Leader>pv <Esc>:call CreateViewModelFieldProperty()<CR>
 
+nnoremap <Leader>wr :set wrap! wrap?<CR>
+nnoremap <Leader>hi :set hlsearch<CR>:let @/='<C-r><C-w>'<CR>
+
