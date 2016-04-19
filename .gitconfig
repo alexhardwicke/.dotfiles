@@ -10,6 +10,7 @@
 	publish = push -u origin master
     stash-peek = stash show -p stash@{0}
 	wdiff = diff --word-diff=color
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [color "diff"]
 	meta = 6
 	frag = 3
