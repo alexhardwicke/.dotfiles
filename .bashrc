@@ -25,6 +25,8 @@ if [ "$TERM" == "screen" ]; then
 
     export PATH=$PATH:~/bin
 else
+    echo -ne "\e]0;Bash\a"
+
     keychain ~/.ssh/id_rsa
 
     if [ "$(pidof tmux)" == "" ]; then
