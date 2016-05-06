@@ -18,6 +18,8 @@ if [ "$TERM" == "screen" ]; then
     GIT_PROMPT_ONLY_IN_REPO=1
 
     GIT_PROMPT_THEME=Custom
+
+    export PATH=$PATH:~/bin
 else
     keychain ~/.ssh/id_rsa
 
