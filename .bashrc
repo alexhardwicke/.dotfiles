@@ -1,5 +1,5 @@
 if [ "$TERM" == "screen" ]; then
-#    export TERM=xterm-256color
+    export TERM=xterm-256color
     
     if [ -f ~/.bash_aliases ]; then
         . ~/.bash_aliases;
