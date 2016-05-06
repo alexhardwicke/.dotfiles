@@ -32,6 +32,9 @@ set statusline+=%*
 set laststatus=2
 set updatetime=750
 set ttimeoutlen=50
+set breakindent
+set breakindentopt=sbr
+set showbreak=└>\
 let mapleader=" "
 
 if has("gui_running") == 0
