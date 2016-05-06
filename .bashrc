@@ -9,15 +9,19 @@ if [ "$TERM" == "screen" ]; then
         source ~/.dotfiles/mintty-solarized-dark.sh
     fi
 
-    source ~/bashconf/bin/.git-prompt.sh
+    #source ~/bashconf/bin/.git-prompt.sh
+    GIT_PROMPT_ONLY_IN_REPO=1
+    GIT_PROMPT_FETCH_REMOTE_STATUS=0
+    GIT_PROMPT_SHOW_UNTRACKED_FILES=no
+
     source ~/bash-git-prompt/gitprompt.sh
 
     [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
 
-    PS1="\[\033[34m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\] $ "
-    GIT_PROMPT_ONLY_IN_REPO=1
+    PS1="\[\033[34m\]\w\[\033[36m\]\[\033[0m\] $ "
 
-    GIT_PROMPT_THEME=Custom
+
+    #GIT_PROMPT_THEME=Custom
 
     export PATH=$PATH:~/bin
 else
