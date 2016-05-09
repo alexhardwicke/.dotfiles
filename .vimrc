@@ -41,8 +41,6 @@ if has("gui_running") == 0
     set shell=/bin/bash
 endif
 
-map <C-n> :NERDTreeToggle<CR>
-
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='hardwicke'
@@ -52,14 +50,6 @@ let g:ctrlp_cmd = 'CtrlPMRU'
 let g:ctrlp_cache_dir = "~/.cache/ctrlp"
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 nnoremap <Leader><c-p> <Esc>:CtrlP<CR>
-
-let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_always_populate_loc_list = 1
-
-let g:easytags_async = 1
 
 set commentstring=//%s
 
