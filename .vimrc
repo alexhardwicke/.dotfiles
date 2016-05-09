@@ -70,62 +70,6 @@ if has('persistent_undo')
     set undofile
 endif
 
-function CreateProperty()
-    normal! 0
-    if getline('.')[col('.')-1] == ' '
-        normal! w
-    endif
-    normal! "hdt l"jdw$
-    let type = @h
-    let name = @j
-    let @h = "public " . type . " " . name . " { get; set; }"
-    normal! "hp
-    normal! V=j
-endfunction
-
-function CreateNonAutoProperty(useSetProperty)
-    let currLine = line('.')
-    let bottomLine = currLine + 11
-    normal! 0
-    if getline('.')[col('.')-1] == ' '
-        normal! w
-    endif
-    normal! "hdt l"jdwo
-    let type = @h
-    let name = @j
-    normal! "jpb~h"kdw
-    let fieldname = "_" . @k
-    let preSet = "private " . type . " " . fieldname . ";\npublic " . type . " " . name . "\n{\nget\n{\nreturn " . fieldname  . ";\n}\nset\n{\n"
-    let postSet = "\n}\n}"
-    if a:useSetProperty == 1
-        let @h = preSet . "SetProperty(ref " . fieldname . ", value);" . postSet
-    else
-        let @h = preSet . fieldname . " = value;" . postSet
-    endif
-
-    normal! "hpkdd
-    normal! v
-    call setpos('.',[0,bottomLine,0])
-    normal! =
-    call setpos('.',[0,currLine,0])
-    normal! v
-    call setpos('.',[0,bottomLine,0])
-    normal! :'<,'>s/_MyVal/_myVal/g
-    call setpos('.',[0,bottomLine,0])
-    normal! j
-endfunction
-
-function CreateBackingFieldProperty()
-    call CreateNonAutoProperty(0)
-endfunction
-
-function CreateViewModelFieldProperty()
-    call CreateNonAutoProperty(1)
-endfunction
-
-nnoremap <Leader>pp <Esc>:call CreateProperty()<CR>
-nnoremap <Leader>pb <Esc>:call CreateBackingFieldProperty()<CR>
-nnoremap <Leader>pv <Esc>:call CreateViewModelFieldProperty()<CR>
 
 nnoremap <Leader>wr :set wrap! wrap?<CR>
 nnoremap <Leader>hi :set hlsearch<CR>:let @/='<C-r><C-w>'<CR>
