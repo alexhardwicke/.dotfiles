@@ -27,7 +27,7 @@ if [ "$TERM" == "screen" ]; then
 else
     echo -ne "\e]0;Bash\a"
 
-    keychain ~/.ssh/id_rsa
+    #keychain ~/.ssh/id_rsa
 
     if [ "$(pidof tmux)" == "" ]; then
         exec tmux
