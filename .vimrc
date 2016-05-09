@@ -70,7 +70,5 @@ if has('persistent_undo')
     set undofile
 endif
 
-
-nnoremap <Leader>wr :set wrap! wrap?<CR>
 nnoremap <Leader>hi :set hlsearch<CR>:let @/='<C-r><C-w>'<CR>
 
