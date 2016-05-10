@@ -40,7 +40,7 @@ else
     #keychain ~/.ssh/id_rsa
 
     if [ "$(pgrep tmux)" == "" ]; then
-        tmux
+        exec tmux
     else
         tmux attach &> /dev/null
     fi
