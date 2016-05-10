@@ -1,4 +1,4 @@
-if [ "$TERM" == "screen" ]; then
+if [ ! "$TMUX" == "" ]; then
     export TERM=xterm-256color
     
     if [ -f ~/.bash_aliases ]; then
