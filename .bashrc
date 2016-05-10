@@ -24,7 +24,7 @@ if [ ! "$TMUX" == "" ]; then
 
     [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
 
-    PS1="\[\033[34m\]\w\[\033[36m\]\[\033[0m\] $ "
+    PS1="\e]0;Bash\a\[\033[34m\]\w\[\033[36m\]\[\033[0m\] $ "
 
 
     #GIT_PROMPT_THEME=Custom
