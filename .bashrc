@@ -4,6 +4,8 @@ export PATH=$PATH:/bin/:/mingw64/bin/
 
 if [ ! "$TMUX" == "" ]; then
     export TERM=xterm-256color
+
+    alias ag='ag --search-files'
     
     if [ -f ~/.bash_aliases ]; then
         . ~/.bash_aliases;
