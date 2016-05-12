@@ -1,6 +1,6 @@
 # For some bizarre reason, pinned mintty doesn't add /bin/ to PATH. :(
 set MSYSTEM=MINGW64
-export PATH=$PATH:/bin/:/mingw64/bin/
+export PATH=$PATH:/bin/:/mingw64/bin/:/usr/local/games/
 
 if [ ! "$TMUX" == "" ]; then
     export TERM=xterm-256color
