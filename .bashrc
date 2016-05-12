@@ -3,6 +3,8 @@ set MSYSTEM=MINGW64
 export PATH=$PATH:/bin/:/mingw64/bin/:/usr/local/games/
 
 if [ ! "$TMUX" == "" ]; then
+    fortune | cowsay
+
     export TERM=xterm-256color
 
     alias ag='ag --search-files'
