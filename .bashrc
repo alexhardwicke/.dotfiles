@@ -34,7 +34,7 @@ if [ ! "$TMUX" == "" ]; then
 
     #GIT_PROMPT_THEME=Custom
 
-    export PATH=$PATH:~/bin
+    export PATH=/mingw64/:/mingw64/bin/:$PATH:~/bin
 else
     echo -ne "\e]0;Bash\a"
 
