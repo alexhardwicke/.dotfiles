@@ -5,7 +5,7 @@ export PATH=$PATH:/bin/:/mingw64/bin/:/usr/local/games/
 if [ ! "$TMUX" == "" ]; then
     fortune | cowsay
 
-    eval `~/bin/keychain/keychain --eval --agents ssh id_rsa`
+    eval `~/bin/keychain/keychain -q --eval --agents ssh id_rsa`
 
     cd ~/
 
