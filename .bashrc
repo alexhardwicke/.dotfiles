@@ -5,6 +5,8 @@ export PATH=$PATH:/bin/:/mingw64/bin/:/usr/local/games/
 if [ ! "$TMUX" == "" ]; then
     fortune | cowsay
 
+    ~/bin/keychain/keychain ~/.ssh/id_rsa
+
     export TERM=xterm-256color
 
     alias ag='ag --search-files'
