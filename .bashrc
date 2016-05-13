@@ -21,7 +21,6 @@ if [ ! "$TMUX" == "" ]; then
         source ~/.dotfiles/mintty-solarized-dark.sh
     fi
 
-    #source ~/bashconf/bin/.git-prompt.sh
     GIT_PROMPT_ONLY_IN_REPO=1
     GIT_PROMPT_FETCH_REMOTE_STATUS=0
     GIT_PROMPT_SHOW_UNTRACKED_FILES=no
