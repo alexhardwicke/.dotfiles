@@ -15,8 +15,6 @@ if [ ! "$TMUX" == "" ]; then
 
     export GIT_GUI_LIB_DIR=/c/msys64/usr/share/git-gui/lib
 
-    eval $(/usr/bin/ssh-pageant -r -a "/tmp/.ssh-pageant-$USERNAME")
-    
     if [ -f ~/.bash_aliases ]; then
         . ~/.bash_aliases;
     fi
