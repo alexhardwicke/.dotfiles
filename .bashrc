@@ -7,6 +7,8 @@ if [ ! "$TMUX" == "" ]; then
 
     ~/bin/keychain/keychain ~/.ssh/id_rsa
 
+    cd ~/
+
     export TERM=xterm-256color
 
     alias ag='ag --search-files'
