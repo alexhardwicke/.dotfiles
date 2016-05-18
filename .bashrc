@@ -12,6 +12,7 @@ if [ ! "$TMUX" == "" ]; then
     export TERM=xterm-256color
 
     alias ag='ag --search-files'
+    alias jq="jq -C"
 
     export GIT_GUI_LIB_DIR=/c/msys64/usr/share/git-gui/lib
 
