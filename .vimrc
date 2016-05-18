@@ -41,6 +41,11 @@ let mapleader=" "
 " Have j and k work nicer with word wrapping
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
+
+" Stay in visual mode when indenting
+vnoremap < <gv
+vnoremap > >gv
+
 if has("gui_running") == 0
     set shell=/bin/bash
 endif
