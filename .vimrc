@@ -9,6 +9,7 @@ set background=dark
 colorscheme solarized
 set ruler
 set number
+set relativenumber
 set ignorecase
 set hlsearch
 set incsearch
