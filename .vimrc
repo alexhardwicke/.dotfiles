@@ -80,4 +80,4 @@ if has('persistent_undo')
 endif
 
 nnoremap <Leader>hi :set hlsearch<CR>:let @/='<C-r><C-w>'<CR>
-nnoremap <esc> :noh<cr><esc>
+"nnoremap <esc> :noh<cr><esc>
