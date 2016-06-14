@@ -42,7 +42,7 @@ if [ ! "$TMUX" == "" ]; then
 
     #GIT_PROMPT_THEME=Custom
 
-    export PATH=/mingw64/:/mingw64/bin/:$PATH:~/bin
+    export PATH=/mingw64/:/mingw64/bin/:$PATH:~/bin:/c/Program\ Files\ \(x86\)/MSBuild/14.0/Bin/:~/bin/diff-so-fancy/
 else
     echo -ne "\e]0;Bash\a"
 
