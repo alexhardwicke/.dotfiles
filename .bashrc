@@ -1,6 +1,11 @@
 # For some bizarre reason, pinned mintty doesn't add /bin/ to PATH. :(
-set MSYSTEM=MINGW64
 export PATH=$PATH:/bin/:/mingw64/bin/:/usr/local/games/
+
+if [ "$(uname -o)" == "Msys" ]; then
+    export PYTHONPATH=/c/git-sdk-64/mingw64/lib/python2.7/site-packages/
+fi
+
+set MSYSTEM=MINGW64
 
 if [ ! "$TMUX" == "" ]; then
     fortune | cowsay
