@@ -6,11 +6,10 @@
 	followTags = true
 [alias]
 	st = status
-	branch-name = rev-parse --abbrev-ref HEAD
-	publish = push -u origin master
-    stash-peek = stash show -p stash@{0}
-	wdiff = diff --word-diff=color
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    stash-peek = stash show -p stash@{0} # Peek top of stash
+	wdiff = diff --word-diff=color # Diff by word
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit # Pretty log
+    sl = "!git log --all --grep=\"$1\" #" # Search log
 [color "diff"]
 	meta = 6
 	frag = 3
