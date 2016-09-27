@@ -42,6 +42,10 @@ let mapleader=" "
 vnoremap < <gv
 vnoremap > >gv
 
+if has('gui_running')
+    call gitgutter#disable()
+endif
+
 if has("gui_running") == 0
     set shell=/bin/bash
 endif
