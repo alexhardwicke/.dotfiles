@@ -10,6 +10,8 @@
 	wdiff = diff --word-diff=color # Diff by word
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit # Pretty log
     sl = "!git log --all --grep=\"$1\" #" # Search log
+    restore-file = "!git checkout $(git rev-list -n 1 HEAD -- \"$1\")^ -- \"$1\"" # Restore file
+                                                                             # Note that 
 [color "diff"]
 	meta = 6
 	frag = 3
