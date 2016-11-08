@@ -88,7 +88,6 @@ if has('persistent_undo')
 endif
 
 nnoremap <Leader>hi :set hlsearch<CR>:let @/='<C-r><C-w>'<CR>
-"nnoremap <esc> :noh<cr><esc>
 
 " Use tab and shift-tab to cycle through windows.
 nnoremap <Tab> <C-W>w
