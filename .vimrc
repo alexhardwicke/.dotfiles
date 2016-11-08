@@ -36,6 +36,9 @@ set ttimeoutlen=50
 set breakindent
 set breakindentopt=sbr
 set showbreak=└>\
+set lazyredraw
+set softtabstop=4
+set showmatch
 let mapleader=" "
 
 " Stay in visual mode when indenting
