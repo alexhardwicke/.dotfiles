@@ -41,6 +41,13 @@ set softtabstop=4
 set showmatch
 let mapleader=" "
 
+" This doesn't work for now but I'll get it working sometime. Maybe.
+"augroup update_tmux
+"    autocmd!
+"    autocmd BufWritePost * silent! !"~/.tmux-gitbar/update-gitbar"
+"    autocmd BufWritePost * normal <C-L>
+"augroup END
+
 " Stay in visual mode when indenting
 vnoremap < <gv
 vnoremap > >gv
