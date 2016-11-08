@@ -1,14 +1,14 @@
 # For some bizarre reason, pinned mintty doesn't add /bin/ to PATH. :(
 export PATH=$PATH:/bin/:/mingw64/bin/:/usr/local/games/
 
-if [ "$(uname -o)" == "Msys" ]; then
-    export PYTHONPATH=/c/git-sdk-64/mingw64/lib/python2.7/site-packages/
-fi
-
 set MSYSTEM=MINGW64
 
 if [ ! "$TMUX" == "" ]; then
     fortune | cowsay
+
+    if [ "$(uname -o)" == "Msys" ]; then
+        export PYTHONPATH=/c/git-sdk-64/mingw64/lib/python2.7/site-packages/
+    fi
 
     eval `~/bin/keychain/keychain -q --eval --agents ssh id_rsa`
 
@@ -28,13 +28,10 @@ if [ ! "$TMUX" == "" ]; then
     if [ "$(uname)" == "Linux" ]; then
         source ~/.dotfiles/mintty-solarized-dark.sh
     fi
-
+    
     [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
 
     PS1="\e]0;Bash\a\[\033[34m\]\w\[\033[36m\]\[\033[0m\] $ "
-
-
-    #GIT_PROMPT_THEME=Custom
 
     export PATH=/mingw64/:/mingw64/bin/:$PATH:~/bin:/c/Program\ Files\ \(x86\)/MSBuild/14.0/Bin/:~/bin/diff-so-fancy/
 else
@@ -48,30 +45,4 @@ else
         tmux attach &> /dev/null
     fi
 fi
-
-# cat() {
-#     pygmentize -g $1
-# }
-
-# catl() {
-#     pygmentize -g $1 | perl -e 'print ++$i." $_" for <>'
-# }
-
-# if [ "$(uname -o)" == "Msys" ]; then
-#     # Add python scripts to path
-#     pythonPaths=( $(where python) )
-#     pythonPath=${pythonPaths[0]}
-#     pythonPath=${pythonPath//'\'/'/'}
-#     pythonPath=${pythonPath//'C:'/'/c'}
-#     pythonPath=${pythonPath%/*}
-#     pythonPath="$pythonPath/Scripts"
-#     export PATH=$PATH:$pythonPath
-# fi
-
-
-# PATH="/home/alex/perl5/bin:/home/alex/bin/${PATH+:}${PATH}"; export PATH;
-# PERL5LIB="/home/alex/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
-# PERL_LOCAL_LIB_ROOT="/home/alex/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
-# PERL_MB_OPT="--install_base \"/home/alex/perl5\""; export PERL_MB_OPT;
-# PERL_MM_OPT="INSTALL_BASE=/home/alex/perl5"; export PERL_MM_OPT;
 
