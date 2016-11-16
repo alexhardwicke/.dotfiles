@@ -33,7 +33,7 @@ if [ ! "$TMUX" == "" ]; then
 
     PS1="\e]0;Bash\a\[\033[0m\]$ "
 
-    export PS1=$PS1'$( [ -n $TMUX ] && tmux setenv -g TMUX_PWD_$(tmux display -p "#D" | tr -d %) \~${PWD#~})' 
+    export PS1=$PS1'$( [ -n $TMUX ] && tmux setenv -g TMUX_PWD_$(tmux display -p "#D" | tr -d %) "~${PWD#~}")' 
 
     export PATH=/mingw64/:/mingw64/bin/:$PATH:~/bin:/c/Program\ Files\ \(x86\)/MSBuild/14.0/Bin/:~/bin/diff-so-fancy/
 else
