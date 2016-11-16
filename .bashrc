@@ -31,7 +31,7 @@ if [ ! "$TMUX" == "" ]; then
     
     [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
 
-    PS1="\e]0;Bash\a\[\033[0m\]$ "
+    PS1="\e]0;Bash\a\[\033[0m\]\[\033[34m\] > \[\033[0m\]"
 
     export PS1=$PS1'$( [ -n $TMUX ] && tmux setenv -g TMUX_PWD_$(tmux display -p "#D" | tr -d %) "~${PWD#~}")' 
 
