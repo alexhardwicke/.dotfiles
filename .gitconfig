@@ -5,7 +5,7 @@
 	default = simple
 	followTags = true
 [alias]
-	st = status
+	st = status -s # Show simple status
     stash-peek = stash show -p stash@{0} # Peek top of stash
 	wdiff = diff --word-diff=color # Diff by word
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit # Pretty log
