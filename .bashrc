@@ -41,10 +41,6 @@ else
 
     #keychain ~/.ssh/id_rsa
 
-    if [ "$(pgrep tmux)" == "" ]; then
-        exec tmux
-    else
-        tmux attach &> /dev/null
-    fi
+    exec tmux
 fi
 
