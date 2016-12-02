@@ -30,7 +30,7 @@ set wildmenu
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-set laststatus=2
+set laststatus=0
 set updatetime=750
 set ttimeoutlen=50
 set breakindent
