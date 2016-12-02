@@ -93,3 +93,10 @@ nnoremap <Leader>hi :set hlsearch<CR>:let @/='<C-r><C-w>'<CR>
 " Use tab and shift-tab to cycle through windows.
 nnoremap <Tab> <C-W>w
 nnoremap <S-Tab> <C-W>W
+
+" Set cursor for insert/normal mode properly (Works in mintty)
+let &t_ti.="\e[1 q"
+let &t_SI.="\e[5 q"
+let &t_EI.="\e[1 q"
+let &t_te.="\e[0 q"
+
