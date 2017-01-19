@@ -1,5 +1,6 @@
 # For some bizarre reason, pinned mintty doesn't add /bin/ to PATH. :(
 export PATH=$PATH:/bin/:/mingw64/bin/:/usr/local/games/
+export TMUX_GITBAR_DIR=~/tmux-gitbar/
 
 set MSYSTEM=MINGW64
 
