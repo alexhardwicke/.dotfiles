@@ -76,6 +76,12 @@ if version > 700
     " Have j and k work nicer with word wrapping
     noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
     noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
+
+    " Set cursor for insert/normal mode properly (Works in mintty)
+    let &t_ti.="\e[1 q"
+    let &t_SI.="\e[5 q"
+    let &t_EI.="\e[1 q"
+    let &t_te.="\e[0 q"
 endif
 
 nnoremap <F5> :UndotreeToggle<cr>
@@ -93,10 +99,3 @@ nnoremap <Leader>hi :set hlsearch<CR>:let @/='<C-r><C-w>'<CR>
 " Use tab and shift-tab to cycle through windows.
 nnoremap <Tab> <C-W>w
 nnoremap <S-Tab> <C-W>W
-
-" Set cursor for insert/normal mode properly (Works in mintty)
-let &t_ti.="\e[1 q"
-let &t_SI.="\e[5 q"
-let &t_EI.="\e[1 q"
-let &t_te.="\e[0 q"
-
