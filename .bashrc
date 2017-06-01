@@ -8,7 +8,7 @@ set MSYSTEM=MINGW64
 if [ ! "$TMUX" == "" ]; then
     fortune | cowsay
 
-    if [ "$(uname -o)" == "Msys" ]; then
+    if [ "$(uname)" == MSYS* ]; then
         export PYTHONPATH=/c/git-sdk-64/mingw64/lib/python2.7/site-packages/
     fi
 
