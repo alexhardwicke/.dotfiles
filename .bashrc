@@ -12,7 +12,13 @@ if [ ! "$TMUX" == "" ]; then
         export PYTHONPATH=/c/git-sdk-64/mingw64/lib/python2.7/site-packages/
     fi
 
-    eval `~/bin/keychain/keychain -q --eval --agents ssh id_rsa`
+    if [ "$(uname)" == Darwin ]; then
+        if [[ ! $(ssh-add -l) ]]; then
+            ssh-add ~/.ssh/id_rsa
+        fi
+    else
+        eval `~/bin/keychain/keychain -q --eval --agents ssh id_rsa`
+    fi
 
     cd ~/
 
