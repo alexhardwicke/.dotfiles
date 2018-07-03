@@ -63,7 +63,7 @@ endif
 set commentstring=//%s
 
 " An ugly hack to get this to load for vim but NOT for vsvim
-" (because operator-flashy doesn't work with vsvim)
+" (because various things don't work with vsvim)
 if version > 700
     map y <Plug>(operator-flashy)
     nmap Y <Plug>(operator-flashy)$
