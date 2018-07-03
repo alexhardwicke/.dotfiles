@@ -14,7 +14,7 @@ GPG_TTY=$(tty)
 export GPG_TTY
 
 if [ ! "$TMUX" == "" ]; then
-    fortune | cowsay
+    fortune | cowsay | lolcat
 
     if [ "$(uname)" == MSYS* ]; then
         export PYTHONPATH=/c/git-sdk-64/mingw64/lib/python2.7/site-packages/
