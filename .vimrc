@@ -52,30 +52,13 @@ set softtabstop=4
 set showmatch
 let mapleader=" "
 
-" This doesn't work for now but I'll get it working sometime. Maybe.
-"augroup update_tmux
-"    autocmd!
-"    autocmd BufWritePost * silent! !"~/.tmux-gitbar/update-gitbar"
-"    autocmd BufWritePost * normal <C-L>
-"augroup END
 
-" Stay in visual mode when indenting
 vnoremap < <gv
 vnoremap > >gv
 
 if has('gui_running')
     call gitgutter#disable()
 endif
-
-if has("gui_running") == 0
-    set shell=/bin/bash
-endif
-
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-let g:airline_theme='hardwicke'
-let g:airline#extensions#whitespace#enabled = 0
-let g:airline#extensions#hunks#enabled=0
 
 set commentstring=//%s
 
@@ -84,19 +67,11 @@ set commentstring=//%s
 if version > 700
     map y <Plug>(operator-flashy)
     nmap Y <Plug>(operator-flashy)$
-    " Have j and k work nicer with word wrapping
+
     noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
     noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
-
-    " Set cursor for insert/normal mode properly (Works in mintty)
-    let &t_ti.="\e[1 q"
-    let &t_SI.="\e[5 q"
-    let &t_EI.="\e[1 q"
-    let &t_te.="\e[0 q"
 endif
 
-
-" Keep undo history across sessions by storing it in a file
 if has('persistent_undo')
     let myUndoDir = '~/.vim/undodir'
     " Create dirs
@@ -105,7 +80,3 @@ if has('persistent_undo')
 endif
 
 nnoremap <Leader>hi :set hlsearch<CR>:let @/='<C-r><C-w>'<CR>
-
-" Use tab and shift-tab to cycle through windows.
-nnoremap <Tab> <C-W>w
-nnoremap <S-Tab> <C-W>W
