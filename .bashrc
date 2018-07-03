@@ -21,14 +21,23 @@ if [ ! "$TMUX" == "" ]; then
     fi
 
     if [ "$(uname)" == Darwin ]; then
-        if [[ ! $(ssh-add -l) ]]; then
+        if [[ $(ssh-add -l) == "The agent has no identities." ]]; then
             ssh-add ~/.ssh/id_rsa
         fi
     else
         eval `~/bin/keychain/keychain -q --eval --agents ssh id_rsa`
-    fi
 
-    cd ~/
+        if [ "$(uname)" == MSYS* ]; then
+            export PYTHONPATH=/c/git-sdk-64/mingw64/lib/python2.7/site-packages/
+            export GIT_GUI_LIB_DIR=/c/msys64/usr/share/git-gui/lib
+            export TERM=xterm-256color
+            export PATH=/mingw64/:/mingw64/bin/:$PATH:~/bin:/c/Program\ Files\ \(x86\)/MSBuild/14.0/Bin/:~/bin/diff-so-fancy/
+        else
+            if [ "$(uname)" == "Linux" ]; then
+                source ~/.dotfiles/mintty-solarized-dark.sh
+            fi
+        fi
+    fi
 
 
     alias ag='ag --search-files'
