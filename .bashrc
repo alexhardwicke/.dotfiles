@@ -2,11 +2,16 @@
 export EDITOR=vim
 
 # For some bizarre reason, pinned mintty doesn't add /bin/ to PATH. :(
-export PATH=$PATH:/bin/:/mingw64/bin/:/usr/local/games/
+if [ "$(uname)" == MSYS* ]; then
+    export PATH=$PATH:/bin/:/mingw64/bin/:/usr/local/games/
+    set MSYSTEM=MINGW64
+else
+    export PATH=/usr/local/sbin:$PATH:/bin:~/.fastlane/bin
+fi
 export TMUX_GITBAR_DIR=~/tmux-gitbar/
 export SSH_ASKPASS=""
-
-set MSYSTEM=MINGW64
+GPG_TTY=$(tty)
+export GPG_TTY
 
 if [ ! "$TMUX" == "" ]; then
     fortune | cowsay
