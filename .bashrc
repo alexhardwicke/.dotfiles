@@ -39,6 +39,7 @@ if [ ! "$TMUX" == "" ]; then
         fi
     fi
 
+    gpg --import ~/.pgp/private
 
     alias ag='ag --search-files'
     alias jq="jq -C"
