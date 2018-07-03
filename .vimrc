@@ -1,8 +1,19 @@
 " Put plugins and dictionaries in this dir (also on Windows)
-let vimDir = '$HOME/.vim'
-let &runtimepath.=','.vimDir
+"let vimDir = '$HOME/.vim'
+"let &runtimepath.=','.vimDir
 
-execute pathogen#infect()
+call plug#begin('~/.vim/plugged')
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'tpope/vim-commentary'
+Plug 'ryanoasis/vim-devicons'
+Plug 'airblade/vim-gitgutter'
+Plug 'kana/vim-operator-user'
+Plug 'haya14busa/vim-operator-flashy'
+Plug 'timakro/vim-searchant'
+Plug 'tpope/vim-vinegar'
+call plug#end()
+
 syntax on
 filetype plugin indent on
 set background=dark
