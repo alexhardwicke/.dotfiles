@@ -53,6 +53,9 @@ set showmatch
 let mapleader=" "
 
 
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h,*.cs
+    \ match BadWhitespace /\s\+$/
+
 vnoremap < <gv
 vnoremap > >gv
 
