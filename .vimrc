@@ -84,7 +84,6 @@ if version > 700
     let &t_te.="\e[0 q"
 endif
 
-nnoremap <F5> :UndotreeToggle<cr>
 
 " Keep undo history across sessions by storing it in a file
 if has('persistent_undo')
