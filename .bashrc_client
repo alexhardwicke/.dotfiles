@@ -1,0 +1,10 @@
+source ~/.dotfiles/.bashrc_base
+
+if [ ! "$TMUX" == "" ]; then
+    source ~/.dotfiles/bashrc_session
+else
+    echo -ne "\e]0;Bash\a"
+
+    exec tmux
+fi
+
