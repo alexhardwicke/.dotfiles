@@ -14,7 +14,8 @@ Plug 'timakro/vim-searchant'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'vim-syntastic/syntastic'
-Plug 'nvie/vim-flake8'
+Plug 'alfredodeza/khuno.vim'
+"Plug 'nvie/vim-flake8'
 call plug#end()
 
 syntax on
