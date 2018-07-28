@@ -15,6 +15,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'alfredodeza/khuno.vim'
+Plug 'RRethy/vim-illuminate'
 "Plug 'nvie/vim-flake8'
 call plug#end()
 
