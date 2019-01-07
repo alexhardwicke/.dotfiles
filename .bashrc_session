@@ -2,7 +2,11 @@ source ~/.dotfiles/.bashrc_base
 
 [[ $- != *i* ]] && return
 
-fortune | cowsay | lolcat
+if [ $(uname) == MINGW64_NT-10.0 ]; then
+    fortune | cowsay
+else
+    fortune | cowsay | lolcat
+fi
 
 if [ "$(uname)" == Darwin ]; then
     if [[ $(ssh-add -l) == "The agent has no identities." ]]; then

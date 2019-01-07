@@ -5,6 +5,10 @@ if [ ! "$TMUX" == "" ]; then
 else
     echo -ne "\e]0;Bash\a"
 
-    exec tmux
+    if [ "$(pgrep tmux)" == "" ]; then
+        exec tmux
+    else
+        tmux attach &> /dev/null
+    fi
 fi
 
