@@ -31,7 +31,7 @@
 	showPatch = true
 [core]
 	editor = vim
-	autocrlf = input
+	autocrlf = true
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [diff]
 	compactionHeuristic = true
