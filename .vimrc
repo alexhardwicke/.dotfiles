@@ -16,6 +16,8 @@ Plug 'vim-scripts/indentpython.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'alfredodeza/khuno.vim'
 Plug 'RRethy/vim-illuminate'
+Plug 'vim-airline/vim-airline'
+Plug 'alexhardwicke/vim-airline-hardwicke'
 "Plug 'nvie/vim-flake8'
 call plug#end()
 
@@ -46,7 +48,7 @@ set wildmenu
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-set laststatus=0
+set laststatus=2
 set updatetime=750
 set ttimeoutlen=50
 set breakindent
@@ -57,6 +59,12 @@ set softtabstop=4
 set showmatch
 let mapleader=" "
 let python_highlight_all=1
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme='hardwicke'
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#hunks#enabled=0
 
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
@@ -70,8 +78,9 @@ au BufNewFile,BufRead *.py
 vnoremap < <gv
 vnoremap > >gv
 
-if has('gui_running')
-    call gitgutter#disable()
+if has("gui_running")
+    set guioptions-=T
+    set guioptions-=m
 endif
 
 set commentstring=//%s
@@ -84,6 +93,11 @@ if version > 700
 
     noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
     noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
+
+    let &t_ti.="\e[1 q"
+    let &t_SI.="\e[5 q"
+    let &t_EI.="\e[1 q"
+    let &t_te.="\e[0 q"
 endif
 
 if has('persistent_undo')
