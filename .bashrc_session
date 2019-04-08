@@ -19,8 +19,11 @@ fi
 gpg --import ~/.pgp/private
 
 if [ ! "$TMUX" == "" ]; then
-    PS1="\e]0;Bash\a\[\033[0m\]\[\033[34m\] > \[\033[0m\]"
-    export PS1=$PS1'$( [ -n $TMUX ] && tmux setenv -g TMUX_PWD_$(tmux display -p "#D" | tr -d %) "~${PWD#~}")' 
+    PS1="\e]0;Bash\a\[\033[34m\]\w\[\033[36m\]\[\033[0m\] "
+    #PS1="\e]0;Bash\a\[\033[0m\]\[\033[34m\] > \[\033[0m\]"
+    #export PS1=$PS1'$( [ -n $TMUX ] && tmux setenv -g TMUX_PWD_$(tmux display -p "#D" | tr -d %) "~${PWD#~}")' 
+    #export PROMPT_COMMAND='/home/ah/.tmux-gitbar/update-gitbar; '$PROMPT_COMMAND
+
 else
     export PS1='\w$ '
 fi
