@@ -1,7 +1,3 @@
-" Put plugins and dictionaries in this dir (also on Windows)
-"let vimDir = '$HOME/.vim'
-"let &runtimepath.=','.vimDir
-
 call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'altercation/vim-colors-solarized'
@@ -18,7 +14,6 @@ Plug 'alfredodeza/khuno.vim'
 Plug 'RRethy/vim-illuminate'
 Plug 'vim-airline/vim-airline'
 Plug 'alexhardwicke/vim-airline-hardwicke'
-"Plug 'nvie/vim-flake8'
 call plug#end()
 
 syntax on
