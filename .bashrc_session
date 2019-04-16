@@ -2,19 +2,9 @@ source ~/.dotfiles/.bashrc_base
 
 [[ $- != *i* ]] && return
 
-if [ $(uname) == MINGW64_NT-10.0 ]; then
-    fortune | cowsay
-else
-    fortune | cowsay | lolcat
-fi
+fortune | cowsay | lolcat
 
-if [ "$(uname)" == Darwin ]; then
-    if [[ $(ssh-add -l) == "The agent has no identities." ]]; then
-        ssh-add ~/.ssh/id_rsa
-    fi
-else
-    eval `~/bin/keychain/keychain -q --eval --agents ssh id_rsa`
-fi
+eval `~/bin/keychain/keychain -q --eval --agents ssh id_rsa`
 
 gpg --import ~/.pgp/private
 
