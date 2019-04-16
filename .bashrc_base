@@ -1,3 +1,5 @@
+[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
+
 export EDITOR=vim
 export PATH=/usr/local/sbin:$PATH:/bin:~/bin/:/usr/local/games
 
@@ -7,6 +9,4 @@ export GPG_TTY
 
 
 alias ag='ag --search-files'
-
-[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
 
