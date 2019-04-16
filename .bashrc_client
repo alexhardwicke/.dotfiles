@@ -1,8 +1,8 @@
-source ~/.dotfiles/.bashrc_base
-
 if [ ! "$TMUX" == "" ]; then
     source ~/.dotfiles/.bashrc_session
 else
+    source ~/.dotfiles/.bashrc_base
+
     echo -ne "\e]0;Bash\a"
 
     if [ "$(pgrep tmux)" == "" ]; then
@@ -11,4 +11,3 @@ else
         tmux attach &> /dev/null
     fi
 fi
-
