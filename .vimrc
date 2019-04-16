@@ -81,6 +81,7 @@ vnoremap > >gv
 if has("gui_running")
     set guioptions-=T
     set guioptions-=m
+    call gitgutter#disable()
 endif
 
 set commentstring=//%s
