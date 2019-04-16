@@ -13,6 +13,6 @@ export GPG_TTY
 alias ag='ag --search-files'
 alias ls='ls $LS_OPTIONS'
 
-if [ -d ~/.bashrc_local ]; then
+if [ -f ~/.bashrc_local ]; then
     source ~/.bashrc_local
 fi
