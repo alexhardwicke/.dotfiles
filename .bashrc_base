@@ -5,12 +5,10 @@ eval `dircolors ~/.dotfiles/.dir_colors`
 export EDITOR=vim
 export PATH=/usr/local/sbin:$PATH:/bin:~/bin/:/usr/local/games
 export MC_SKIN=$HOME/.dotfiles/solarized.ini
-
 export LS_OPTIONS='--color=auto'
 export SSH_ASKPASS=""
 GPG_TTY=$(tty)
 export GPG_TTY
-
 
 alias ag='ag --search-files'
 alias ls='ls $LS_OPTIONS'
