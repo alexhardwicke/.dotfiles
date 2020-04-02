@@ -53,6 +53,9 @@ set showbreak=└>\
 set lazyredraw
 set softtabstop=4
 set showmatch
+set mouse=a
+set splitbelow
+set splitright
 let mapleader=" "
 let python_highlight_all=1
 
