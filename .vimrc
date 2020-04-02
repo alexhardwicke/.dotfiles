@@ -14,12 +14,13 @@ Plug 'alfredodeza/khuno.vim'
 Plug 'RRethy/vim-illuminate'
 Plug 'vim-airline/vim-airline'
 Plug 'alexhardwicke/vim-airline-hardwicke'
+Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
 
 syntax on
 filetype plugin indent on
-set background=dark
-colorscheme solarized
+set background=light
+colorscheme PaperColor
 set ruler
 set number
 set relativenumber
