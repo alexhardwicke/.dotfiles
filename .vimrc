@@ -19,8 +19,13 @@ call plug#end()
 
 syntax on
 filetype plugin indent on
-set background=light
-colorscheme PaperColor
+colorscheme solarized
+set background=dark
+
+"let g:solarized_termcolors=256
+let g:solarized_termtrans =1
+"let g:solarized_hitrail   =1
+
 set ruler
 set number
 set relativenumber
@@ -38,7 +43,6 @@ set smarttab
 set shiftwidth=4
 set tabstop=4
 set backspace=indent,eol,start
-set clipboard=unnamed
 set nrformats-=octal
 set wildmenu
 set statusline+=%#warningmsg#
@@ -88,6 +92,8 @@ set commentstring=//%s
 " An ugly hack to get this to load for vim but NOT for vsvim
 " (because various things don't work with vsvim)
 if version > 700
+    set clipboard=unnamed
+
     map y <Plug>(operator-flashy)
     nmap Y <Plug>(operator-flashy)$
 
