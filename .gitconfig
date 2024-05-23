@@ -37,5 +37,8 @@
 [merge]
 	conflictstyle = diff3
 	tool = vimdiff
+	renamelimit = 5120
 [mergetool]
 	prompt = false
+[interactive]
+	diffFilter = diff-so-fancy --patch
